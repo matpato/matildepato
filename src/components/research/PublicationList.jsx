@@ -45,6 +45,22 @@ const PublicationList = () => {
             doi: "(accepted)"
         },
         {
+            title: "From Messy Data to Medical Insights: Creating Knowledge Graphs for Drug Repurposing",
+            authors: "Matilde Pato, Ana Carolina Pereira, Nuno Datia",
+            venue: "womENcourage™ 2025 12th ACM Celebration of Women in Computing",
+            type: "tutorial",
+            year: "2025",
+            doi: "(accepted)"
+        },
+        {
+            title: "Knowledge Graphs as Educational Tools in Biomedical Education",
+            authors: "Ana Carolina Pereira, Matilde Pato, Nuno Datia",
+            venue: "womENcourage™ 2025 12th ACM Celebration of Women in Computing",
+            type: "conference",
+            year: "2025",
+            doi: "(accepted)"
+        },
+        {
             title: "Mapping Drug Interactions and Therapeutic Clusters through Knowledge Graph Visualization",
             authors: "Ana Carolina Pereira, Matilde Pato, Nuno Datia",
             venue: "29th International Conference Information Visualisation (IV25)",
