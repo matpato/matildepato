@@ -75,6 +75,10 @@ git branch -M main
 git remote add origin https://github.com/matpato/matildepato.git
 git push --force origin main:gh-pages
 ```
+3. Update the CV
+```bash
+npm run update
+```
 
 ## 📄 License
 
