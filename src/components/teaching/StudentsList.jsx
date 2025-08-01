@@ -59,18 +59,18 @@ const StudentsList = () => {
                 year: "2024-present",
                 institution: "ISEL",
                 thesis: "Sistema de Recomendação baseado na aprendizagem automática para investigação em doenças respiratórias (BreatheEase Scholar)"
-            },
+            }
+            // Add more current students
+        ],
+        past: [
             {
                 name: "Filipe Silveira",
                 level: "MSc in Computer Science and Engineering",
                 topic: "Machine Learning in Smart Home",
-                year: "2024-present",
+                year: "2024-2025",
                 institution: "UAveiro",
                 thesis: "User Interface for Radar-Based Smart Automation Systems in Smart-Home Environments"
             },
-            // Add more current students
-        ],
-        past: [
             {
                 name: "Ana Sofia Simões Pinto",
                 level: "MSc in Computer Science and Engineering",

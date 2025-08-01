@@ -37,6 +37,22 @@ const PublicationList = () => {
 
     const publications = [
         {
+            title: "Why do women pursue a PhD in Computer Science?",
+            authors: "Erika Ábrahám, Miguel Goulão, Milena Vujovevic Janicic, Sarah Jane Delany, Amal Mersni, Oleksandra Yeremenko, Karima Boudaoud, Caroline Oehlhorn, Ute Schmid, Christina Büsing, Helen Bolke-Hermanns, Kaja Köhnle, Matilde Pato, Deniz Sunar Cerci, Larissa Schmid",
+            venue: "The Journal of Systems & Software",
+            type: "journal",
+            year: "2025",
+            doi: "(accepted)"
+        },
+        {
+            title: "Mapping Drug Interactions and Therapeutic Clusters through Knowledge Graph Visualization",
+            authors: "Ana Carolina Pereira, Matilde Pato, Nuno Datia",
+            venue: "29th International Conference Information Visualisation (IV25)",
+            type: "conference",
+            year: "2025",
+            doi: "(accepted)"
+        },
+        {
             title: "Survey on Recommender Systems for Biomedical Items in Life and Health Sciences",
             authors: "Matilde Pato, Márcia Barros, Francisco M Couto",
             venue: "ACM Computing Surveys 56(6)",
