@@ -17,7 +17,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "npm run build && cd build && git init && git add . && git commit -m \"Deploy updates\" && git branch -M main && git remote add origin https://github.com/matpato/matildepato.git && git push --force origin main:gh-pages"
+    "deploy": "npm run build && cd build && git init && git add . && git commit -m \"Deploy updates\" && git branch -M main && git remote add origin https://github.com/matpato/matildepato.git && git push --force origin main:gh-pages",
+    "update": "git add . && git commit -m 'Update website' && git push origin main && npm run deploy"
   },
   "eslintConfig": {
     "extends": [
