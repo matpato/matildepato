@@ -13,44 +13,38 @@ const PublicationList = () => {
    const getPublicationType = (type) => {
         // Helper function to get single type info
         const getSingleTypeInfo = (singleType) => {
-        switch (singleType) {
+            switch (singleType) {
             case 'journal':
-            return {
+                return {
                 label: 'Journal',
-                className: 'text-xs px-2 py-1 rounded text-white',
-                style: { backgroundColor: '#253494' } // q4-5 - darkest blue
-            };
+                className: 'bg-purple-800 text-purple-100'
+                };
             case 'conference':
-            return {
+                return {
                 label: 'Conference',
-                className: 'text-xs px-2 py-1 rounded text-white',
-                style: { backgroundColor: '#2c7fb8' } // q3-5 - medium blue
-            };
+                className: 'bg-green-800 text-green-100'
+                };
             case 'poster':
-            return {
+                return {
                 label: 'Poster',
-                className: 'text-xs px-2 py-1 rounded text-white',
-                style: { backgroundColor: '#41b6c4' } // q2-5 - blue-green
-            };
+                className: 'bg-green-400 text-green-900'
+                };
             case 'chapter':
-            return {
+                return {
                 label: 'Book Chapter',
-                className: 'text-xs px-2 py-1 rounded text-black',
-                style: { backgroundColor: '#a1dab4' } // q1-5 - light green
-            };
+                className: 'bg-purple-400 text-purple-900'
+                };
             case 'tutorial':
-            return {
+                return {
                 label: 'Tutorial',
-                className: 'text-xs px-2 py-1 rounded text-black',
-                style: { backgroundColor: '#ffffcc' } // q0-5 - lightest yellow
-            };
+                className: 'bg-gray-100 text-gray-800'
+                };
             default:
-            return {
+                return {
                 label: 'Publication',
-                className: 'text-xs px-2 py-1 rounded text-gray-800',
-                style: { backgroundColor: '#f7f7f7' }
-            };
-        }
+                className: 'bg-gray-100 text-gray-800'
+                };
+            }
         };
 
         // Handle array of types
@@ -443,7 +437,6 @@ const PublicationList = () => {
                                             <span 
                                             key={i} 
                                             className={`${type.className} mr-1`}
-                                            style={type.style}
                                             >
                                             {type.label}
                                             </span>
@@ -451,7 +444,6 @@ const PublicationList = () => {
                                         :
                                         <span 
                                             className={pubType.className}
-                                            style={pubType.style}
                                         >
                                             {pubType.label}
                                         </span>
