@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/matildepato/static/css/main.5099212c.css",
-    "main.js": "/matildepato/static/js/main.d7a2fb69.js",
+    "main.js": "/matildepato/static/js/main.5a06d0bc.js",
     "static/js/488.c3b7cdc5.chunk.js": "/matildepato/static/js/488.c3b7cdc5.chunk.js",
     "static/media/academicons.svg": "/matildepato/static/media/academicons.c788a0dd6b8ea2fdfba6.svg",
     "static/media/academicons.woff": "/matildepato/static/media/academicons.f9238352271492d38233.woff",
@@ -9,11 +9,11 @@
     "static/media/academicons.ttf": "/matildepato/static/media/academicons.813078f03d628816fd64.ttf",
     "index.html": "/matildepato/index.html",
     "main.5099212c.css.map": "/matildepato/static/css/main.5099212c.css.map",
-    "main.d7a2fb69.js.map": "/matildepato/static/js/main.d7a2fb69.js.map",
+    "main.5a06d0bc.js.map": "/matildepato/static/js/main.5a06d0bc.js.map",
     "488.c3b7cdc5.chunk.js.map": "/matildepato/static/js/488.c3b7cdc5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5099212c.css",
-    "static/js/main.d7a2fb69.js"
+    "static/js/main.5a06d0bc.js"
   ]
 }
