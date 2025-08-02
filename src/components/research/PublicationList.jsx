@@ -14,35 +14,35 @@ const PublicationList = () => {
         // Helper function to get single type info
         const getSingleTypeInfo = (singleType) => {
             switch (singleType) {
-            case 'journal':
+                 case 'journal':
                 return {
-                label: 'Journal',
-                className: 'bg-purple-800 text-purple-100'
+                    label: 'Journal',
+                    className: 'text-xs px-2 py-1 rounded ylgnbu-q4'
                 };
-            case 'conference':
+                case 'conference':
                 return {
-                label: 'Conference',
-                className: 'bg-green-800 text-green-100'
+                    label: 'Conference', 
+                    className: 'text-xs px-2 py-1 rounded ylgnbu-q3'
                 };
-            case 'poster':
+                case 'poster':
                 return {
-                label: 'Poster',
-                className: 'bg-green-400 text-green-900'
+                    label: 'Poster',
+                    className: 'text-xs px-2 py-1 rounded ylgnbu-q2'
                 };
-            case 'chapter':
+                case 'chapter':
                 return {
-                label: 'Book Chapter',
-                className: 'bg-purple-400 text-purple-900'
+                    label: 'Book Chapter',
+                    className: 'text-xs px-2 py-1 rounded ylgnbu-q1'
                 };
-            case 'tutorial':
+                case 'tutorial':
                 return {
-                label: 'Tutorial',
-                className: 'bg-gray-100 text-gray-800'
+                    label: 'Tutorial',
+                    className: 'text-xs px-2 py-1 rounded ylgnbu-q0'
                 };
-            default:
+                default:
                 return {
-                label: 'Publication',
-                className: 'bg-gray-100 text-gray-800'
+                    label: 'Publication',
+                   className: 'text-xs px-2 py-1 rounded ylgnbu-q0'
                 };
             }
         };
