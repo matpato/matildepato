@@ -17,11 +17,11 @@ const PublicationList = () => {
             case 'journal':
                 return {
                 label: 'Journal',
-                className: 'bg-purple-800 text-purple-100'
+                className: 'bg-blue-800 text-blue-100 dark:bg-blue-700 dark:text-blue-300'
                 };
             case 'conference':
                 return {
-                label: 'Conference',
+                label: 'Conference', 
                 className: 'bg-green-800 text-green-100'
                 };
             case 'poster':
