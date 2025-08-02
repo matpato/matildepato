@@ -23,6 +23,8 @@ const PublicationList = () => {
                 return { label: 'Poster', className: 'bg-purple-600 text-purple-100 dark:bg-purple-600 dark:text-purple-200' };
                 case 'chapter':
                 return { label: 'Book Chapter', className: 'bg-yellow-600 text-yellow-100 dark:bg-yellow-600 dark:text-yellow-200' };
+                case 'tutorial':
+                return { label: 'Tutorial', className: 'bg-green-600 text-green-100 dark:bg-green-600 dark:text-green-200' };
                 default:
                 return { label: 'Publication', className: 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200' };
             }
@@ -50,6 +52,11 @@ const PublicationList = () => {
             return {
                 label: 'Poster',
                 className: 'bg-purple-600 text-purple-100 dark:bg-purple-600 dark:text-purple-200'
+            };
+            case 'tutorial':
+            return {
+                label: 'Tutorial',
+                className: 'bg-green-600 text-green-100 dark:bg-green-600 dark:text-green-200'
             };
             default:
             return {
@@ -80,7 +87,7 @@ const PublicationList = () => {
             title: "Knowledge Graphs as Educational Tools in Biomedical Education",
             authors: "Ana Carolina Pereira, Matilde Pato, Nuno Datia",
             venue: "womENcourage™ 2025 12th ACM Celebration of Women in Computing",
-            type: "conference",
+            type: ["conference", "poster"],
             year: "2025",
             note: "(accepted)"
         },
@@ -90,7 +97,7 @@ const PublicationList = () => {
             venue: "29th International Conference Information Visualisation (IV25)",
             type: "conference",
             year: "2025",
-            doi: "(accepted)"
+            note: "(accepted)"
         },
         {
             title: "Survey on Recommender Systems for Biomedical Items in Life and Health Sciences",
