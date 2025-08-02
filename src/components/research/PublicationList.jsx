@@ -383,21 +383,27 @@ const PublicationList = () => {
                                                 : `In: ${pub.venue}`}
                                     </span>
                                     <span>. </span>
+                                    {pub.note && <span className="text-orange-600 dark:text-orange-400 font-medium">{pub.note}</span>}
                                     <div className="space-y-1 text-sm md:text-base">
-                                        <a
-                                            href={`https://doi.org/${pub.doi}`}
-                                            className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            [DOI]
-                                        </a>
-                                        <button
-                                            onClick={() => copyBibtex(pub.bibtex, index)}
-                                            className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
-                                        >
-                                            {copiedIndex === index ? "[BibTeX copied!]" : "[BibTeX]"}
-                                        </button>
+                                    {pub.doi && (
+                                    <a
+                                        href={`https://doi.org/${pub.doi}`}
+                                        className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        [DOI]
+                                    </a>
+                                    )}
+                                    
+                                    {pub.bibtex && (
+                                    <button
+                                        onClick={() => copyBibtex(pub.bibtex, index)}
+                                        className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
+                                    >
+                                        {copiedIndex === index ? "[BibTeX copied!]" : "[BibTeX]"}
+                                    </button>
+                                    )}
                                         <span className={`text-xs px-2 py-1 rounded ${pubType.className}`}>
                                             {pubType.label}
                                         </span>
