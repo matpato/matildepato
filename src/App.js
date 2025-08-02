@@ -84,7 +84,7 @@ const PersonalPage = () => {
                     </p>
                     <p className="text-gray-600 dark:text-gray-300">
                       <FileText className="w-4 h-4 inline mr-2" />
-                      Office: Building F, Room F0.15
+                      Office: Building F, Room F0.35
                     </p>
                   </div>
                 </div>
