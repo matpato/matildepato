@@ -16,17 +16,17 @@ const PublicationList = () => {
             return type.map(singleType => {
             switch (singleType) {
                 case 'journal':
-                return { label: 'Journal', className: 'bg-blue-800 text-blue-100 dark:bg-blue-700 dark:text-blue-300' };
+                return { label: 'Journal', className: 'cb-purple-dark' };
                 case 'conference':
-                return { label: 'Conference', className: 'bg-teal-600 text-teal-100 dark:bg-teal-600 dark:text-teal-200' };
-                case 'poster':
-                return { label: 'Poster', className: 'bg-purple-600 text-purple-100 dark:bg-purple-600 dark:text-purple-200' };
+                return { label: 'Conference', className: 'cb-green-dark' };
                 case 'chapter':
-                return { label: 'Book Chapter', className: 'bg-yellow-600 text-yellow-100 dark:bg-yellow-600 dark:text-yellow-200' };
+                return { label: 'Book Chapter', className: 'cb-purple-light' };
+                case 'poster':
+                return { label: 'Poster', className: 'cb-green-light' };
                 case 'tutorial':
-                return { label: 'Tutorial', className: 'bg-green-600 text-green-100 dark:bg-green-600 dark:text-green-200' };
+                return { label: 'Tutorial', className: 'cb-neutral' };
                 default:
-                return { label: 'Publication', className: 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200' };
+                return { label: 'Publication', className: 'cb-neutral' };
             }
             });
         }
