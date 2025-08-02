@@ -13,38 +13,44 @@ const PublicationList = () => {
    const getPublicationType = (type) => {
         // Helper function to get single type info
         const getSingleTypeInfo = (singleType) => {
-            switch (singleType) {
-                 case 'journal':
-                return {
-                    label: 'Journal',
-                    className: 'text-xs px-2 py-1 rounded ylgnbu-q4'
-                };
-                case 'conference':
-                return {
-                    label: 'Conference', 
-                    className: 'text-xs px-2 py-1 rounded ylgnbu-q3'
-                };
-                case 'poster':
-                return {
-                    label: 'Poster',
-                    className: 'text-xs px-2 py-1 rounded ylgnbu-q2'
-                };
-                case 'chapter':
-                return {
-                    label: 'Book Chapter',
-                    className: 'text-xs px-2 py-1 rounded ylgnbu-q1'
-                };
-                case 'tutorial':
-                return {
-                    label: 'Tutorial',
-                    className: 'text-xs px-2 py-1 rounded ylgnbu-q0'
-                };
-                default:
-                return {
-                    label: 'Publication',
-                   className: 'text-xs px-2 py-1 rounded ylgnbu-q0'
-                };
-            }
+        switch (singleType) {
+            case 'journal':
+            return {
+                label: 'Journal',
+                className: 'text-xs px-2 py-1 rounded text-white',
+                style: { backgroundColor: '#253494' } // q4-5 - darkest blue
+            };
+            case 'conference':
+            return {
+                label: 'Conference',
+                className: 'text-xs px-2 py-1 rounded text-white',
+                style: { backgroundColor: '#2c7fb8' } // q3-5 - medium blue
+            };
+            case 'poster':
+            return {
+                label: 'Poster',
+                className: 'text-xs px-2 py-1 rounded text-white',
+                style: { backgroundColor: '#41b6c4' } // q2-5 - blue-green
+            };
+            case 'chapter':
+            return {
+                label: 'Book Chapter',
+                className: 'text-xs px-2 py-1 rounded text-black',
+                style: { backgroundColor: '#a1dab4' } // q1-5 - light green
+            };
+            case 'tutorial':
+            return {
+                label: 'Tutorial',
+                className: 'text-xs px-2 py-1 rounded text-black',
+                style: { backgroundColor: '#ffffcc' } // q0-5 - lightest yellow
+            };
+            default:
+            return {
+                label: 'Publication',
+                className: 'text-xs px-2 py-1 rounded text-gray-800',
+                style: { backgroundColor: '#f7f7f7' }
+            };
+        }
         };
 
         // Handle array of types
@@ -434,15 +440,22 @@ const PublicationList = () => {
                                     )}
                                     {Array.isArray(pubType) ? 
                                         pubType.map((type, i) => (
-                                        <span key={i} className={`text-xs px-2 py-1 rounded mr-1 ${type.className}`}>
+                                            <span 
+                                            key={i} 
+                                            className={`${type.className} mr-1`}
+                                            style={type.style}
+                                            >
                                             {type.label}
-                                        </span>
+                                            </span>
                                         ))
                                         :
-                                        <span className={`text-xs px-2 py-1 rounded ${pubType.className}`}>
-                                        {pubType.label}
+                                        <span 
+                                            className={pubType.className}
+                                            style={pubType.style}
+                                        >
+                                            {pubType.label}
                                         </span>
-                                    }
+                                        }
                                     </div>
                                 </div>
                             </li>
