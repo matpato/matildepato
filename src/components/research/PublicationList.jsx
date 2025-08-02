@@ -11,29 +11,67 @@ const PublicationList = () => {
     };
 
     const getPublicationType = (type) => {
+        // If it's an array, handle multiple types
+        if (Array.isArray(type)) {
+            return type.map(singleType => {
+            switch (singleType) {
+                case 'journal':
+                return { label: 'Journal', className: 'bg-blue-800 text-blue-100 dark:bg-blue-700 dark:text-blue-300' };
+                case 'conference':
+                return { label: 'Conference', className: 'bg-teal-600 text-teal-100 dark:bg-teal-600 dark:text-teal-200' };
+                case 'poster':
+                return { label: 'Poster', className: 'bg-purple-600 text-purple-100 dark:bg-purple-600 dark:text-purple-200' };
+                case 'chapter':
+                return { label: 'Book Chapter', className: 'bg-yellow-600 text-yellow-100 dark:bg-yellow-600 dark:text-yellow-200' };
+                default:
+                return { label: 'Publication', className: 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200' };
+            }
+            });
+        }
+        
+        // Single type (existing logic)
         switch (type) {
             case 'journal':
-                return {
-                    label: 'Journal',
-                    className: 'bg-blue-800 text-blue-100 dark:bg-blue-700 dark:text-blue-300'
-                };
+            return {
+                label: 'Journal',
+                className: 'bg-blue-800 text-blue-100 dark:bg-blue-700 dark:text-blue-300'
+            };
             case 'conference':
-                return {
-                    label: 'Conference',
-                    className: 'bg-teal-600 text-teal-100 dark:bg-teal-600 dark:text-teal-200'
-                };
+            return {
+                label: 'Conference',
+                className: 'bg-teal-600 text-teal-100 dark:bg-teal-600 dark:text-teal-200'
+            };
             case 'chapter':
-                return {
-                    label: 'Book Chapter',
-                    className: 'bg-yellow-600 text-yellow-100 dark:bg-yellow-600 dark:text-yellow-200'
-                };
+            return {
+                label: 'Book Chapter',
+                className: 'bg-yellow-600 text-yellow-100 dark:bg-yellow-600 dark:text-yellow-200'
+            };
+            case 'poster':
+            return {
+                label: 'Poster',
+                className: 'bg-purple-600 text-purple-100 dark:bg-purple-600 dark:text-purple-200'
+            };
             default:
-                return {
-                    label: 'Publication',
-                    className: 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200'
-                };
+            return {
+                label: 'Publication',
+                className: 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200'
+            };
         }
-    };
+        };
+
+        {(() => {
+            // Get the first/primary type if it's an array, otherwise use the single type
+            const primaryType = Array.isArray(pub.type) ? pub.type[0] : pub.type;
+            
+            if (primaryType === 'chapter') {
+                return `In: ${pub.venue} (${pub.publisher})`;
+            } else if (primaryType === 'journal') {
+                return pub.venue;
+            } else {
+                return `In: ${pub.venue}`;
+            }
+            }
+        )()}
 
     const publications = [
         {
@@ -376,11 +414,17 @@ const PublicationList = () => {
                                 <div>
                                     <span>{pub.authors} ({pub.year}). <span className="font-bold">{pub.title}</span>. </span>
                                     <span className="italic">
-                                        {pub.type === 'chapter'
-                                            ? `In: ${pub.venue} (${pub.publisher})`
-                                            : pub.type === 'journal'
-                                                ? pub.venue
-                                                : `In: ${pub.venue}`}
+                                        {Array.isArray(pubType) ? 
+                                            pubType.map((type, i) => (
+                                                <span key={i} className={`text-xs px-2 py-1 rounded mr-1 ${type.className}`}>
+                                                {type.label}
+                                                </span>
+                                            ))
+                                            :
+                                            <span className={`text-xs px-2 py-1 rounded ${pubType.className}`}>
+                                                {pubType.label}
+                                            </span>
+                                        }
                                     </span>
                                     <span>. </span>
                                     {pub.note && <span className="text-orange-600 dark:text-orange-400 font-medium">{pub.note}</span>}
