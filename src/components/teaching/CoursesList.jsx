@@ -23,7 +23,7 @@ const CoursesList = () => {
       },
       {
         name: "Natural Processing Language (NLP)",
-        code: "COURSE123",
+        code: "COURSE4373",
         level: "MSc",
         institution: "ISEL",
         department: "DEETC",
@@ -32,7 +32,7 @@ const CoursesList = () => {
       },
       {
         name: "Big Data Engineering (BDE)",
-        code: "COURSE123",
+        code: "COURSE4372",
         level: "MSc",
         institution: "ISEL",
         department: "DEETC",

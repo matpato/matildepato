@@ -240,9 +240,13 @@ const PublicationList = () => {
             venue: "2024 The 8th International Conference on Advances in Artificial Intelligence (ICCAI)",
             type: "conference",
             year: "2024",
-            doi: "",
-            bibtex: `
-        }`
+            doi: "10.1145/3704137.37041",
+            bibtex: `@inproceedings{costa2024empirical,
+            title={An empirical study on the application of KANs for classification},
+            author={Costa, Samuel Sampaio and Pato, Matilde and Datia, Nuno},
+            booktitle={Proceedings of the 2024 8th International Conference on Advances in Artificial Intelligence},
+            pages={308--314},
+            year={2024}}`
         },
         {
             title: "Evaluating the performance of algorithms in axillary microwave imaging towards improved breast cancer staging",
