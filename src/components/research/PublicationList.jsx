@@ -59,20 +59,6 @@ const PublicationList = () => {
         }
         };
 
-        {(() => {
-            // Get the first/primary type if it's an array, otherwise use the single type
-            const primaryType = Array.isArray(pub.type) ? pub.type[0] : pub.type;
-            
-            if (primaryType === 'chapter') {
-                return `In: ${pub.venue} (${pub.publisher})`;
-            } else if (primaryType === 'journal') {
-                return pub.venue;
-            } else {
-                return `In: ${pub.venue}`;
-            }
-            }
-        )()}
-
     const publications = [
         {
             title: "Why do women pursue a PhD in Computer Science?",
@@ -414,11 +400,17 @@ const PublicationList = () => {
                                 <div>
                                     <span>{pub.authors} ({pub.year}). <span className="font-bold">{pub.title}</span>. </span>
                                     <span className="italic">
-                                        {pub.type === 'chapter'
-                                            ? `In: ${pub.venue} (${pub.publisher})`
-                                            : pub.type === 'journal'
-                                                ? pub.venue
-                                                : `In: ${pub.venue}`}
+                                        {(() => {
+                                            // Get the first/primary type if it's an array, otherwise use the single type
+                                            const primaryType = Array.isArray(pub.type) ? pub.type[0] : pub.type;
+                                            if (primaryType === 'chapter') {
+                                                return `In: ${pub.venue} (${pub.publisher})`;
+                                            } else if (primaryType === 'journal') {
+                                                return pub.venue;
+                                            } else {
+                                                return `In: ${pub.venue}`;
+                                            }
+                                            })()}
                                     </span>
                                     <span>. </span>
                                     {pub.note && <span className="text-orange-600 dark:text-orange-400 font-medium">{pub.note}</span>}
