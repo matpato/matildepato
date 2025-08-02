@@ -87,9 +87,9 @@ const PublicationList = () => {
             title: "Knowledge Graphs as Educational Tools in Biomedical Education",
             authors: "Ana Carolina Pereira, Matilde Pato, Nuno Datia",
             venue: "womENcourage™ 2025 12th ACM Celebration of Women in Computing",
-            type: ["conference", "poster"],
             year: "2025",
-            note: "(accepted)"
+            note: "(accepted)",
+            type: ["conference", "poster"] 
         },
         {
             title: "Mapping Drug Interactions and Therapeutic Clusters through Knowledge Graph Visualization",
