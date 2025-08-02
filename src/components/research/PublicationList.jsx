@@ -10,60 +10,50 @@ const PublicationList = () => {
         setTimeout(() => setCopiedIndex(null), 2000);
     };
 
-    const getPublicationType = (type) => {
-        // If it's an array, handle multiple types
-        if (Array.isArray(type)) {
-            return type.map(singleType => {
+   const getPublicationType = (type) => {
+        // Helper function to get single type info
+        const getSingleTypeInfo = (singleType) => {
             switch (singleType) {
-                case 'journal':
-                return { label: 'Journal', className: 'cb-purple-dark' };
-                case 'conference':
-                return { label: 'Conference', className: 'cb-green-dark' };
-                case 'chapter':
-                return { label: 'Book Chapter', className: 'cb-purple-light' };
-                case 'poster':
-                return { label: 'Poster', className: 'cb-green-light' };
-                case 'tutorial':
-                return { label: 'Tutorial', className: 'cb-neutral' };
-                default:
-                return { label: 'Publication', className: 'cb-neutral' };
+            case 'journal':
+                return {
+                label: 'Journal',
+                className: 'bg-purple-800 text-purple-100'
+                };
+            case 'conference':
+                return {
+                label: 'Conference',
+                className: 'bg-green-800 text-green-100'
+                };
+            case 'poster':
+                return {
+                label: 'Poster',
+                className: 'bg-green-400 text-green-900'
+                };
+            case 'chapter':
+                return {
+                label: 'Book Chapter',
+                className: 'bg-purple-400 text-purple-900'
+                };
+            case 'tutorial':
+                return {
+                label: 'Tutorial',
+                className: 'bg-gray-100 text-gray-800'
+                };
+            default:
+                return {
+                label: 'Publication',
+                className: 'bg-gray-100 text-gray-800'
+                };
             }
-            });
+        };
+
+        // Handle array of types
+        if (Array.isArray(type)) {
+            return type.map(getSingleTypeInfo);
         }
         
-        // Single type (existing logic)
-        switch (type) {
-            case 'journal':
-            return {
-                label: 'Journal',
-                className: 'cb-purple-dark'
-            };
-            case 'conference':
-            return {
-                label: 'Conference', 
-                className: 'cb-green-dark'
-            };
-            case 'chapter':
-            return {
-                label: 'Book Chapter',
-                className: 'cb-purple-light'
-            };
-            case 'poster':
-            return {
-                label: 'Poster',
-                className: 'cb-green-light'
-            };
-            case 'tutorial':
-            return {
-                label: 'Tutorial',
-                className: 'cb-neutral'
-            };
-            default:
-            return {
-                label: 'Publication',
-                className: 'cb-neutral'
-            };
-            }
+        // Handle single type
+        return getSingleTypeInfo(type);
         };
 
     const publications = [
