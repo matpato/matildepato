@@ -402,6 +402,7 @@ const PublicationList = () => {
                     .sort((a, b) => b.year - a.year) // Sort by year, newest first
                     .map((pub, index) => {
                         const pubType = getPublicationType(pub.type);
+                        console.log('pubType for', pub.title, ':', pubType);
                         return (
                             <li key={index} className="text-gray-600 dark:text-gray-300">
                                 <div>
@@ -422,6 +423,7 @@ const PublicationList = () => {
                                     <span>. </span>
                                     {pub.note && <span className="text-orange-600 dark:text-orange-400 font-medium">{pub.note}</span>}
                                     <div className="space-y-1 text-sm md:text-base">
+                                    
                                     {pub.doi && (
                                     <a href={`https://doi.org/${pub.doi}`}
                                         className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
@@ -440,9 +442,17 @@ const PublicationList = () => {
                                         {copiedIndex === index ? "[BibTeX copied!]" : "[BibTeX]"}
                                     </button>
                                     )}
-                                        <span className={`text-xs px-2 py-1 rounded ${pubType.className}`}>
-                                            {pubType.label}
+                                    {Array.isArray(pubType) ? 
+                                        pubType.map((type, i) => (
+                                        <span key={i} className={`text-xs px-2 py-1 rounded mr-1 ${type.className}`}>
+                                            {type.label}
                                         </span>
+                                        ))
+                                        :
+                                        <span className={`text-xs px-2 py-1 rounded ${pubType.className}`}>
+                                        {pubType.label}
+                                        </span>
+                                    }
                                     </div>
                                 </div>
                             </li>
