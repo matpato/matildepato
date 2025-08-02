@@ -42,7 +42,7 @@ const PublicationList = () => {
             venue: "The Journal of Systems & Software",
             type: "journal",
             year: "2025",
-            doi: "(accepted)"
+            note: "(accepted)"
         },
         {
             title: "From Messy Data to Medical Insights: Creating Knowledge Graphs for Drug Repurposing",
@@ -50,7 +50,7 @@ const PublicationList = () => {
             venue: "womENcourage™ 2025 12th ACM Celebration of Women in Computing",
             type: "tutorial",
             year: "2025",
-            doi: "(accepted)"
+            note: "(accepted)"
         },
         {
             title: "Knowledge Graphs as Educational Tools in Biomedical Education",
@@ -58,7 +58,7 @@ const PublicationList = () => {
             venue: "womENcourage™ 2025 12th ACM Celebration of Women in Computing",
             type: "conference",
             year: "2025",
-            doi: "(accepted)"
+            note: "(accepted)"
         },
         {
             title: "Mapping Drug Interactions and Therapeutic Clusters through Knowledge Graph Visualization",
