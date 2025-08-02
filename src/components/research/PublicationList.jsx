@@ -414,17 +414,11 @@ const PublicationList = () => {
                                 <div>
                                     <span>{pub.authors} ({pub.year}). <span className="font-bold">{pub.title}</span>. </span>
                                     <span className="italic">
-                                        {Array.isArray(pubType) ? 
-                                            pubType.map((type, i) => (
-                                                <span key={i} className={`text-xs px-2 py-1 rounded mr-1 ${type.className}`}>
-                                                {type.label}
-                                                </span>
-                                            ))
-                                            :
-                                            <span className={`text-xs px-2 py-1 rounded ${pubType.className}`}>
-                                                {pubType.label}
-                                            </span>
-                                        }
+                                        {pub.type === 'chapter'
+                                            ? `In: ${pub.venue} (${pub.publisher})`
+                                            : pub.type === 'journal'
+                                                ? pub.venue
+                                                : `In: ${pub.venue}`}
                                     </span>
                                     <span>. </span>
                                     {pub.note && <span className="text-orange-600 dark:text-orange-400 font-medium">{pub.note}</span>}
