@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+.cb-purple-dark { background-color: #762a83; color: #ffffff; }
+.cb-purple-light { background-color: #af8dc3; color: #ffffff; }
+.cb-neutral { background-color: #f7f7f7; color: #333333; }
+.cb-green-light { background-color: #7fbf7b; color: #ffffff; }
+.cb-green-dark { background-color: #1b7837; color: #ffffff; }
