@@ -58,14 +58,6 @@ const PublicationList = () => {
 
     const publications = [
         {
-            title: "Why do women pursue a PhD in Computer Science?",
-            authors: "Erika Ábrahám, Miguel Goulão, Milena Vujovevic Janicic, Sarah Jane Delany, Amal Mersni, Oleksandra Yeremenko, Karima Boudaoud, Caroline Oehlhorn, Ute Schmid, Christina Büsing, Helen Bolke-Hermanns, Kaja Köhnle, Matilde Pato, Deniz Sunar Cerci, Larissa Schmid",
-            venue: "The Journal of Systems & Software",
-            type: "journal",
-            year: "2025",
-            note: "(accepted)"
-        },
-        {
             title: "From Messy Data to Medical Insights: Creating Knowledge Graphs for Drug Repurposing",
             authors: "Matilde Pato, Ana Carolina Pereira, Nuno Datia",
             venue: "womENcourage™ 2025 12th ACM Celebration of Women in Computing",
@@ -87,7 +79,50 @@ const PublicationList = () => {
             venue: "29th International Conference Information Visualisation (IV25)",
             type: "conference",
             year: "2025",
-            note: "(accepted)"
+            doi: "10.1109/IV68685.2025.00074",
+            note: "Best Paper",
+            bibtex: `
+          @INPROCEEDINGS{10714302,
+            author={Pereira, Ana Carolina and Pato, Matilde and Datia, Nuno},
+            booktitle={2025 29th International Conference Information Visualisation (IV)}, 
+            title={Mapping Drug Interactions and Therapeutic Clusters through Knowledge Graph Visualization}, 
+            year={2025},
+            volume={},
+            number={},
+            pages={},
+            keywords={Visualization;Machine learning algorithms;Visual data-analytics},
+            doi={10.1109/IV68685.2025.00074}}`
+        },
+        {
+            title: "Why do women pursue a PhD in Computer Science?",
+            authors: "Erika Ábrahám, Miguel Goulão, Milena Vujovevic Janicic, Sarah Jane Delany, Amal Mersni, Oleksandra Yeremenko, Karima Boudaoud, Caroline Oehlhorn, Ute Schmid, Christina Büsing, Helen Bolke-Hermanns, Kaja Köhnle, Matilde Pato, Deniz Sunar Cerci, Larissa Schmid",
+            venue: "The Journal of Systems & Software",
+            type: "journal",
+            year: "2025",
+            doi: "10.1016/j.jss.2025.112586",
+            bibtex: `
+          @article{ABRAHAM2026112586,
+            title = {Why do women pursue a Ph.D. in Computer Science?},
+            journal = {Journal of Systems and Software},
+            volume = {231},
+            pages = {112586},
+            year = {2026},
+            issn = {0164-1212},
+            doi = {https://doi.org/10.1016/j.jss.2025.112586},
+            url = {https://www.sciencedirect.com/science/article/pii/S0164121225002559},
+            author = {Erika Ábrahám and Miguel Goulão and Milena Vujošević Janičić and Sarah Jane Delany and Amal Mersni and Oleksandra Yeremenko and Özge Büyükdağlı and Karima Boudaoud and Caroline Oehlhorn and Ute Schmid and Christina Büsing and Helen Bolke-Hermanns and Kaja Köhnle and Matilde Pato and Deniz Sunar Cerci and Larissa Schmid},
+            keywords = {Computer science education, Female under-representation, Gender, Ph.D. career path, Ph.D. challenges and opportunities},
+            abstract = {Context:
+            Computer science, even now, attracts a small number of women, and the proportion of women in the field decreases through advancing career stages. Consequently, few women progress to Ph.D. studies in computer science after completing master’s studies. Empowering women at this stage in their careers is essential, not just for equality reasons, but to unlock untapped potential for society, industry and academia.
+            Objective:
+            This paper aims to identify students’ career assumptions and information related to Ph.D. studies focused on gender-based differences. We propose a program to inform female master students about Ph.D. studies that explains the process, clarifies misconceptions, and alleviates concerns.
+            Method:
+            An extensive survey was conducted to identify factors that encourage and discourage students from undertaking Ph.D. studies. The analysis identified statistically significant differences between those who undertook Ph.D. studies and those who did not, as well as statistically significant gender differences. A catalogue of questions to initiate discussions with potential Ph.D. students which allowed them to explore these factors was developed. These were structured into a Women’s Career Lunch program where students can explore and discuss the benefits of Ph.D. study.
+            Results:
+            Encouraging factors towards Ph.D. study include interest and confidence in research arising from a research involvement during earlier studies; enthusiasm for and self-confidence in computer science in addition to an interest in an academic career; encouragement from external sources; and a positive perception towards Ph.D. studies which can involve achieving personal goals. Discouraging factors include uncertainty and lack of knowledge of the Ph.D. process, a perception of lower job flexibility, and the requirement for long-term commitment. Gender differences highlighted that female students who pursue a Ph.D. have less confidence in their technical skills than males but a higher preference for interdisciplinary areas. Female students are less inclined than males to perceive the industry as offering better job opportunities and more flexible career paths than academia.
+            Conclusions:
+            The insights collected from the survey facilitated the development of a questions catalogue structured into the Women Career Lunch program to help students make a more informed decision concerning whether they should pursue a Ph.D. in computer science. Localised versions of this program, in 8 languages, were created to support its adoption in different countries and assist in mitigating the female under-representation challenge.}
+                    }`
         },
         {
             title: "Survey on Recommender Systems for Biomedical Items in Life and Health Sciences",
@@ -117,6 +152,20 @@ const PublicationList = () => {
             keywords = {Recommender systems, biomedical informatics, information retrieval, knowledge graphs, reproducibility datasets}
             }
         }`
+        },
+        {
+            title: "Best Practices From Bachelor/Master Studies to Ph. D",
+            authors: "Amal Mersni, Caroline Oehlhorn, Erika Abraham, Karima Boudaoud, Larissa Schmid, Matilde Pato, Miguel Goulao, Milena Vujošević Janičić, Oleksandra Yeremenko, Ozge Buyukdaglıand Sarah Jane Delany, Ute Schmid",
+            venue: "EUGAIN, Informatics Europe, COST",
+            type: "journal",
+            year: "2024",
+            bibtex: `
+          @article{mersni2024best,
+            title={Best Practices From Bachelor/Master Studies to Ph. D},
+            author={Mersni, Amal and Oehlhorn, Caroline and Abraham, Erika and Boudaoud, Karima and Schmid, Larissa and Pato, Matilde and Goulao, Miguel and Vujo{\v{s}}evi{\'c} Jani{\v{c}}i{\'c}, Milena and Yeremenko, Oleksandra and Delany, Ozge Buyukdagl{\i}and Sarah Jane and others},
+            year={2024},
+            publisher={EUGAIN, Informatics Europe, COST}
+            }`
         },
         {
             title: "How NLP and Visual Analytics Can Improve Asset Management",
